@@ -6,15 +6,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faSearch);
-
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-
-Vue.component("font-awesome-icon", FontAwesomeIcon);
 export default {
   name: "SearchBox"
 };
@@ -30,9 +21,14 @@ input[type="text"] {
   background: #dad8d8;
   border-radius: 8px;
   outline: none;
+  z-index: -1;
 }
 input[type="text"]::placeholder {
   font-size: 20px;
   color: #3e464c;
+}
+.search-icon {
+  z-index: 10;
+  color: white;
 }
 </style>

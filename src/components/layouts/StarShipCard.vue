@@ -6,7 +6,7 @@
     <img :src="getImage()" alt="starship" style="width:100%; height:200px;" />
     <div class="inner">
       <div class="outer">
-        <p class="title">{{starship.name}}</p>
+        <h6 class="title">{{starship.name}}</h6>
         <p
           class="description"
         >These vessels are manufactured by the Corellian Engineering Corporation. While the CR90 would see initial use within the late Galactic Republic.</p>
@@ -62,12 +62,11 @@ export default {
 }
 .title {
   color: #3e464c;
-  font-size: 15px;
   font-weight: 400;
 }
 .description {
   color: #3e464c;
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 5px;
 }
 button {
