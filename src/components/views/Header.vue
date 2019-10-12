@@ -1,11 +1,11 @@
 <template>
   <div class="banner">
     <div class="logo">
-      <img src="../assets/logo.png" width="110px" />
+      <img src="../../assets/logo.png" width="110px" />
     </div>
     <div class="banner-content">
       <div class="title">
-        <img src="../assets/logo.png" width="110px" />
+        <img src="../../assets/logo.png" width="110px" />
         <span><b>Directory</b></span>
       </div>
       <p class="subtext">
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import SearchBox from './SearchBox';
+import SearchBox from '../layouts/SearchBox';
 export default {
   components: { SearchBox },
 };
@@ -26,7 +26,7 @@ export default {
 
 <style>
 .banner {
-  background-image: url("../assets/hero-banner.jpg");
+  background-image: url("../../assets/hero-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +34,7 @@ export default {
   width: 100%;
   height: 90vh;
   align-content: center;
+  margin-bottom: 60px;
 }
 .logo {
   position: absolute;
@@ -45,6 +46,9 @@ export default {
   border-bottom: 2px solid #fff;
   display: inline;
   vertical-align: middle;
+}
+.title img{
+  padding-bottom: 20px;
 }
 span{
  margin-left:12px;

@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import Vue from "vue";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faSearch);
 
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component("font-awesome-icon", FontAwesomeIcon);
 export default {
   name: "SearchBox"
 };
@@ -22,12 +22,10 @@ export default {
 
 <style scoped>
 input[type="text"] {
-  position: relative;
   padding: 10px;
   padding-bottom: 8px;
   padding-left: 50px;
   width: 700px;
-  height: 35px;
   color: #000;
   background: #dad8d8;
   border-radius: 8px;
