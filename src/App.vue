@@ -5,25 +5,33 @@
       v-if="starships"
       :starships="starships"
     />
+    <Planets
+      v-if="planets"
+      :planets="planets"
+    />
+    <Characters
+      v-if="characters"
+      :characters="characters"
+    />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 import Header from './components/views/Header'
 import Starships from './components/views/Starships'
-import BootstrapVue from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
+import Planets from './components/views/planets'
+import Characters from './components/views/characters'
+import Footer from './components/views/Footer'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Starships
+    Starships,
+    Planets,
+    Characters,
+    Footer
   },
   data(){
     return {
@@ -40,7 +48,7 @@ export default {
       return response.json()
     }).then((jsonData) => {
       this.starships = jsonData.results;
-      this.starships = this.starships.splice(4)
+      this.starships = this.starships.splice(4);
     }).catch((error) => {
       throw error;
     })
@@ -63,6 +71,7 @@ export default {
       return response.json()
     }).then((jsonData) => {
       this.characters = jsonData.results;
+      this.characters = this.characters.splice(6)
     }).catch((error) => {
       throw error;
     })

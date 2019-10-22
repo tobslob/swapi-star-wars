@@ -1,40 +1,38 @@
 <template>
-    <div class="starships">
+    <div class="planets">
         <div id="header">
-          <h1>Popular Starships</h1>
+          <h1>Popular Planets</h1>
         </div>
-        <Starships 
-        :starships="starships"
+        <Planets
+            v-if="planets.length > 3"
+            :planets="planets"
         />
-        <StarshipMore />
     </div>
 </template>
 
 <script>
-import Starships from '../../components/layouts/Starships.layout';
-import StarshipMore from '../layouts/starships.layouts.more';
+import Planets from '../layouts/planets.layout'
+
 export default {
     props: {
-        starships: Array
+        planets: Array
     },
     components: {
-        Starships,
-        StarshipMore
+        Planets
     }
 }
 </script>
 
 <style scoped>
-.starships{
+.planet {
     text-align: center;
 }
-.starships h1{
+.planets h1{
     display: inline;
     color: #494956;
-    overflow: hidden;
 }
 #header{
-    margin-bottom: 80px
+    margin-bottom: 50px
 }
 #header h1:after{
     content: '';

@@ -45,12 +45,15 @@ export default {
 
 <style scoped>
     .starship-lists{
-  display: flex;
-  flex-wrap: wrap;
-}
-button {
-    width: 350px;
-    border-color: grey;
-    background-color: white
-}
+        display: flex;
+        flex-wrap: wrap;
+    }
+    button {
+        width: 450px;
+        height: 45px;
+        border-color: grey;
+        background-color: white;
+        border-radius: 5px;
+        margin: 30px 0 70px 0;
+    }
 </style>
